@@ -18,7 +18,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        ca-certificates \
        curl \
-    && curl -s https://install.citusdata.com/community/deb.sh | bash \
+    && curl -s https://packagecloud.io/install/repositories/j-white/citusdata-community-arm64/script.deb.sh | bash \
     && apt-get install -y postgresql-$PG_MAJOR-citus-12.0=$CITUS_VERSION \
                           postgresql-$PG_MAJOR-hll=2.17.citus-1 \
                           postgresql-$PG_MAJOR-topn=2.5.0.citus-1 \
